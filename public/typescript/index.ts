@@ -42,7 +42,6 @@ const fps = { detectFPS: 0, drawFPS: 0, frames: 0, averageMs: 0 }; // holds calc
 
 const log = (...msg) => { // helper method to output messages
   dom.log.innerText += msg.join(' ') + '\n';
-  console.log(...msg); // eslint-disable-line no-console
 };
 const status = (msg) => dom.fps.innerText = msg; // print status element
 const perf = (msg) => dom.perf.innerText = 'tensors:' + (human.tf.memory().numTensors as number).toString() + ' | performance: ' + JSON.stringify(msg).replace(/"|{|}/g, '').replace(/,/g, ' | '); // print performance element
